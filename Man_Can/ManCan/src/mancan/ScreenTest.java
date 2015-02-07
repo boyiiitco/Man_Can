@@ -10,7 +10,7 @@ import javax.imageio.ImageIO;
 import javax.swing.JPanel;
 
 public class ScreenTest extends JPanel {
-    public int x = 0, y=0;
+    public static int x = 0, y=0;
     
     public ScreenTest() {
         setVisible(true);
@@ -23,8 +23,9 @@ public class ScreenTest extends JPanel {
             File w = new File ("mancanman.png");
             BufferedImage man = ImageIO.read(w);
             BufferedImage background = ImageIO.read(f);
-            g.drawImage(background, x, y, getWidth(), getHeight(), this);
+            g.drawImage(background, x, y, 800, getHeight(), this);
             g.drawImage(man, 225, 180, 20, 40, this);
+            repaint();
         } catch (IOException ex) {
         }
         

@@ -17,7 +17,11 @@ public class FrameLayout extends JFrame {
          pane.setEnabled(false);
          screen.setSize(400,400);
          decision = new JPanel();
-         for(int i = 0; i < dec.length; i++) {
+         dec[0] = new ButtonA();
+         decision.add(dec[0]);
+         dec[1] = new ButtonB();
+         decision.add(dec[1]);
+         for(int i = 2; i < dec.length; i++) {
              dec[i] = new JButton();
              dec[i].setSize(400, 40);
              decision.add(dec[i]);
